@@ -1,16 +1,16 @@
-# Overview (22 November 2022)
+## Overview (22 November 2022)
 
 Firstly, take a look at the `Getting setup` section below, this will advise on the tech needed. Once you are ready to go, come back to this section.
 
 
-# Requirements
+## Requirements
 
 1. Node v19.1.0
 2. Gulp (CLI 2.3.0)
 3. Shopify CLI 3.23.0
 
 
-# Deployment process 
+## Deployment process 
 
 - Run a [Buddy Live Backup] before carrying out any live changes.
 - To preview the dev theme in your browser, refer to the URL in the Shopify CLI terminal.
@@ -18,7 +18,7 @@ Firstly, take a look at the `Getting setup` section below, this will advise on t
 - Check if there are Buddy pipelines for [review] and [production] deployment.
 
 
-# Getting setup 🚀
+## Getting setup 🚀
 
 You will need to install:
 
@@ -35,39 +35,39 @@ shopify version
 ```
 
 
-## Node
+### Node
 
 Required by Gulp and Shopify CLI.
 
-### Setup
+#### Setup
 
 If you install Homebrew first it will install Node for you.
 
 I would recommend deleting the node_modules folder by running `rm -rf node_modules`, and running `npm install` with required node version running (using npm this can be done using `nvm use 19` to set node to v19).
 
-### Usage
+#### Usage
 
 With the node envionment setup, we will just be using Shopicy CLI and Gulp when working on Shopify themes.
 
 
-## Gulp
+### Gulp
 
 Feel free to review the gulpfile.js but as a quickover, we are mainly just uglifying and merging the SCSS/JS files into a single CSS/JS file. In hindsight, we should probably review this in the near future, and split the CSS/JS out into individual files (maybe per template) rather than trying to serving everything on the site into two files. 
 
 The icons folder will accept svgs, it will minify them and strip out any comments or unnessarcy spacing (and also attributes such as class; important to retain if used for css animation, in which case comment out this function in gulpfile.js). It will also prefix the file name with 'icon-' if it doesn't exist, and drop the icon within the snippets folder.
 
-### Setup
+#### Setup
 
 With Node installed and configured, let's install Gulp locally, and download the plugins we need. This is a really straight forward process. Firstly, access the dev folder within your terminal. From there, run the `npm install` terminal command to download all the gulp plugins needed. 
 
-### Usage
+#### Usage
 
 Run a separate instance of terminal in the dev folder (usually `dev` or `src` folder within root of project directory), and run the `gulp` watch command (sometimes it might be `gulp watch` might be required) from there. 
 
 Gulp will then process the files, and drop them in assets, in which Shopify CLI will see the changes and push them up to the Shopify Store. 
 
 
-## Shopify CLI
+### Shopify CLI
 
 The Shopify CLI dev command will watch for changes in the following folders:
 
@@ -79,11 +79,11 @@ The Shopify CLI dev command will watch for changes in the following folders:
  - Snippets
  - Templates
 
-### Setup
+#### Setup
 
 It is recommended to always have at least two Shopify themes in a store. Firstly a development theme in which to actively built and test a feature or fix (using a theme name that reflects the project/task URI and github branch name). Then a final production theme which we deploy to once the client has approved a development theme. An intermediary review theme can be used to combine multiple developments prior to deploying to production theme (such as if multiple developers have worked on different features or fixes, this intermediary theme can be used to fix merge issues before being reviewed).
 
-#### Ignored files
+##### Ignored files
 
 Within the `.shopifyignore` file, we ignore the following theme files:
 - config/settings_data.json 
@@ -92,7 +92,7 @@ Within the `.shopifyignore` file, we ignore the following theme files:
 
 The reason we ignore these files from Shopify, is because they will be different per store, so we can't safetly sync changes. 
 
-### Usage
+#### Usage
 
 Run a separate instance of terminal in the root of project directory.
 
