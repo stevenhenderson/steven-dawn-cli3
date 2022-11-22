@@ -83,7 +83,7 @@ The Shopify CLI dev command will watch for changes in the following folders:
 
 It is recommended to always have at least two Shopify themes in a store. Firstly a development theme in which to actively built and test a feature or fix (using a theme name that reflects the project/task URI and github branch name). Then a final production theme which we deploy to once the client has approved a development theme. An intermediary review theme can be used to combine multiple developments prior to deploying to production theme (such as if multiple developers have worked on different features or fixes, this intermediary theme can be used to fix merge issues before being reviewed).
 
-Installing Shopify CLI 3.x was tested on OS Ventura 13.0.1 and therefore recommended.
+Installing Shopify CLI 3.x was tested on OS Ventura 13.0.1 and therefore is recommended.
 
 ##### Ignored files
 
