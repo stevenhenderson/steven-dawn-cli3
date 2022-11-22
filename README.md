@@ -58,7 +58,7 @@ The icons folder will accept svgs, it will minify them and strip out any comment
 
 #### Setup
 
-With Node installed and configured, let's install Gulp locally, and download the plugins we need. This is a really straight forward process. Firstly, access the dev folder within your terminal. From there, run the `npm install` terminal command to download all the gulp plugins needed. 
+With Node installed and configured, let's install Gulp locally, and download the plugins we need. This is a really straight forward process. Firstly, access the dev folder (usually `dev` or `src` folder within root of project directory) within your terminal. From there, run the `npm install` terminal command to download all the gulp plugins needed. 
 
 #### Usage
 
