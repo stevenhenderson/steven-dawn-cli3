@@ -1,6 +1,9 @@
 ## Overview (22 November 2022)
 
-Firstly, take a look at the `Getting setup` section below, this will advise on the tech needed. Once you are ready to go, come back to this section.
+- Run a [Buddy Live Backup] before carrying out any live changes.
+- To preview the dev theme in your browser, refer to the URL in the Shopify CLI terminal.
+- Never merge direct to `master` (try to merge to `development`, then to `review`, then to `master`). At very least, merge to `review`, and then review to `master`.
+- Check if there are Buddy pipelines for [review] and [production] deployment.
 
 
 ## Requirements
@@ -8,14 +11,6 @@ Firstly, take a look at the `Getting setup` section below, this will advise on t
 1. Node v19.1.0
 2. Gulp (CLI 2.3.0)
 3. Shopify CLI 3.23.0
-
-
-## Deployment process 
-
-- Run a [Buddy Live Backup] before carrying out any live changes.
-- To preview the dev theme in your browser, refer to the URL in the Shopify CLI terminal.
-- Never merge direct to `master` (try to merge to `development`, then to `review`, then to `master`). At very least, merge to `review`, and then review to `master`.
-- Check if there are Buddy pipelines for [review] and [production] deployment.
 
 
 ## Getting setup 🚀
