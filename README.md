@@ -47,7 +47,7 @@ I would recommend deleting the node_modules folder by running `rm -rf node_modul
 
 #### Usage
 
-With the node envionment setup, we will just be using Shopicy CLI and Gulp when working on Shopify themes.
+With the node envionment setup, we will just be using Shopify CLI and Gulp when working on Shopify themes.
 
 
 ### Gulp
