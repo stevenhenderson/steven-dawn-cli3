@@ -1,5 +1,4 @@
-# Dawn CLI 3
-## Overview (22 November 2022)
+# Overview (22 November 2022)
 
 Firstly, take a look at the `Getting setup` section below, this will advise on the tech needed. Once you are ready to go, come back to this section.
 
