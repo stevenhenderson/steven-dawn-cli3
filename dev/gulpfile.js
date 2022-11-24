@@ -26,14 +26,14 @@ gulp.task(
     gulp.series('scss-lint', () => {
         return gulp
             // Gather scss from theme.scss includes
-            .src('styles/theme.scss')
+            .src('styles/base.scss')
             // Combine theme.scss without sass compression and rename to non-minified file
             .pipe(sass().on('error', sass.logError))
-            .pipe(rename('theme.css'))
+            .pipe(rename('base.css'))
             .pipe(gulp.dest(assetsDir))
             // Combine theme.scss with sass compression and rename to minified file
             .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-            .pipe(rename('theme.min.css'))
+            .pipe(rename('base.min.css'))
             .pipe(gulp.dest(assetsDir));
     })
 );
