@@ -38,7 +38,7 @@ Required by Gulp and Shopify CLI.
 
 If you install Homebrew first it will install Node for you.
 
-I would recommend deleting the node_modules folder by running `rm -rf node_modules`, and running `npm install` with required node version running (using npm this can be done using `nvm use 19` to set node to v19).
+I would recommend deleting the node_modules folder by running `rm -rf node_modules`, and then running `npm install` with required node version running (using npm this can be done using `nvm use 19` to set node to v19).
 
 #### Usage
 
