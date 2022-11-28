@@ -47,7 +47,7 @@ With the node envionment setup, we will just be using Shopify CLI and Gulp when 
 
 ### Gulp
 
-Feel free to review the gulpfile.js but as a quickover, we are mainly just uglifying and merging the SCSS/JS files into a single CSS/JS file. In hindsight, we should probably review this in the near future, and split the CSS/JS out into individual files (maybe per template) rather than trying to serving everything on the site into two files. 
+Feel free to review the gulpfile.js but as a quickover, we are mainly just uglifying and merging the SCSS/JS files into a single CSS/JS file. In hindsight, we should probably review this in the near future, and split the CSS/JS out into individual files (maybe per template) rather than trying to serve everything on the site into two files. 
 
 The icons folder will accept svgs, it will minify them and strip out any comments or unnessarcy spacing (and also attributes such as class; important to retain if used for css animation, in which case comment out this function in gulpfile.js). It will also prefix the file name with 'icon-' if it doesn't exist, and drop the icon within the snippets folder.
 
