@@ -100,3 +100,12 @@ Run a separate instance of terminal in the root of project directory.
 We first need to log into the Shopify store. If already logged into another account, then log out using `shopify auth logout` via Shopify CLI in terminal. Each of the next steps is going to prompt you for login first, followed by a prompt in terminal to select theme from presented Shopify CLI list.
 
 If not already downloaded and ready locally, you will need to pull down your theme using `shopify theme pull --store {store-name}` command in terminal to work on it locally. Once a theme is locally ready, you'll need to working on the theme locally using `shopify theme dev` command in terminal to watch for your changes.
+
+
+### Theme Version Build
+
+#### Setup
+
+With Node and Gulp installed and configured, let's install gulp-bump and yargs.
+
+If installing into new project, then use `npm install gulp-bump --save-dev` command in dev directory to setup gulp-bump for Gulp. Then run `npm install yargs --save-dev` command to install yargs for Gulp. And finally, run `npm install fs` command to setup required Gulp includes for the snippet versioning control (can be removed from theme.liquid and gulpfile.js if not desired).
