@@ -1,4 +1,4 @@
-## Overview (22 November 2022)
+## Overview (10 January 2023)
 
 - Run a [Buddy Live Backup] before carrying out any live changes.
 - To preview the dev theme in your browser, refer to the URL in the Shopify CLI terminal.
@@ -91,15 +91,19 @@ Within the `.shopifyignore` file, we ignore the following theme files:
 - templates/*.json
 - locales/*.json
 
-The reason we ignore these files from Shopify, is because they will be different per store, so we can't safetly sync changes. 
+The reason we ignore these files from Shopify, is because they will be different per store, so we can't safely sync changes. 
 
-#### Usage
+#### Usage (IN PROGRESS)
+
+Recommend always exiting current shopify admin login instance using `shopify auth logout` via Shopify CLI in terminal first, then using `shopify theme dev --store {my-store}` to be sure login to the correct store.
 
 Run a separate instance of terminal in the root of project directory.
 
-We first need to log into the Shopify store. If already logged into another account, then log out using `shopify auth logout` via Shopify CLI in terminal. Each of the next steps is going to prompt you for login first, followed by a prompt in terminal to select theme from presented Shopify CLI list.
+We first need to log into the Shopify store. If already logged into another account, then log out using `shopify auth logout` via Shopify CLI in terminal (recommend doing this anyway). Each of the next steps is going to prompt you for login first, followed by a prompt in terminal to select theme from presented Shopify CLI list.
 
 If not already downloaded and ready locally, you will need to pull down your theme using `shopify theme pull --store {store-name}` command in terminal to work on it locally. Once a theme is locally ready, you'll need to work on the theme locally using `shopify theme dev` command in terminal to watch for your changes.
+
+To work on an existing theme on the store, use `theme watch -e {theme-name}` via ThemeKit. Otherwise if working with Shopify CLI use `shopify theme dev --store {my-store}` command in terminal to work on temporary development theme for that store (if already logged into store then just use `shopify theme dev` command in terminal), then deploy to actual theme using `shopify theme deploy --store {my-store}` command in terminal when finished.
 
 
 ### Theme Version Build
