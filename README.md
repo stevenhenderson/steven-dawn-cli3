@@ -38,7 +38,7 @@ If you install Homebrew first it will install Node for you.
 
 I would recommend deleting the node_modules folder by running `rm -rf node_modules`, and then running `npm install` with required node version running (using npm this can be done using `nvm use 19` to set node to v19).
 
-#### Gulp Setup
+### Gulp Setup
 
 With Node installed and configured, let's install Gulp locally, and download the plugins we need. This is a really straight forward process.
 
@@ -46,13 +46,13 @@ If the project already has a gulpfile.js file in the dev folder (usually `dev` o
 
 If installing into new project, then use `npm init` command in dev directory to setup new package.json file. Then run `npm install gulp` command to install Gulp.
 
-#### Shopify CLI Setup
+### Shopify CLI Setup
 
 It is recommended to always have at least two Shopify themes in a store. Firstly a development theme in which to actively built and test a feature or fix (using a theme name that reflects the project/task URI and github branch name). Then a final production theme which we deploy to once the client has approved a development theme. An intermediary review theme can be used to combine multiple developments prior to deploying to production theme (such as if multiple developers have worked on different features or fixes, this intermediary theme can be used to fix merge issues before being reviewed).
 
 Installing Shopify CLI 3.x was tested on OS Ventura 13.0.1 and therefore is recommended.
 
-##### Ignored files
+#### Ignored files
 
 Within the `.shopifyignore` file, we ignore the following theme files:
 - config/settings_data.json 
@@ -62,19 +62,19 @@ Within the `.shopifyignore` file, we ignore the following theme files:
 The reason we ignore these files from Shopify, is because they will be different per store, so we can't safely sync changes. 
 
 
-### Usage
+## Usage
 
-#### Node Usage
+### Node Usage
 
 With the node envionment setup, we will just be using Shopify CLI and Gulp when working on Shopify themes.
 
-#### Gulp Usage
+### Gulp Usage
 
 Run a separate instance of terminal in the dev folder (usually `dev` or `src` folder within root of project directory), and run the `gulp` watch command (sometimes it might be `gulp watch` might be required) from there. 
 
 Gulp will then process the files, and drop them in assets, in which Shopify CLI will see the changes and push them up to the Shopify Store. 
 
-#### Shopify CLI Usage (IN PROGRESS)
+### Shopify CLI Usage (IN PROGRESS)
 
 Recommend always exiting current shopify admin login instance using `shopify auth logout` via Shopify CLI in terminal first, then using `shopify theme dev --store {my-store}` to be sure login to the correct store.
 
