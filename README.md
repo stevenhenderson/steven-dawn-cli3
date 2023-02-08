@@ -61,6 +61,14 @@ Within the `.shopifyignore` file, we ignore the following theme files:
 
 The reason we ignore these files from Shopify, is because they will be different per store, so we can't safely sync changes. 
 
+### Theme Version Build Setup
+
+With Node and Gulp installed and configured, let's install gulp-bump and yargs.
+
+If installing into new project, then use `npm install gulp-bump --save-dev` command in dev directory to setup gulp-bump for Gulp. Then run `npm install yargs --save-dev` command to install yargs for Gulp. And finally, run `npm install fs` command to setup required Gulp includes for the snippet versioning control (can be removed from theme.liquid and gulpfile.js if not desired).
+
+Running `gulp` command in terminal will trigger theme version bump. Refer to gulpfile.js for gulp-bump parameter usage.
+
 
 ## Usage
 
@@ -111,14 +119,3 @@ The Shopify CLI dev command will watch for changes in the following folders:
  - Sections
  - Snippets
  - Templates
-
-
-### Theme Version Build
-
-#### Setup
-
-With Node and Gulp installed and configured, let's install gulp-bump and yargs.
-
-If installing into new project, then use `npm install gulp-bump --save-dev` command in dev directory to setup gulp-bump for Gulp. Then run `npm install yargs --save-dev` command to install yargs for Gulp. And finally, run `npm install fs` command to setup required Gulp includes for the snippet versioning control (can be removed from theme.liquid and gulpfile.js if not desired).
-
-Running `gulp` command in terminal will trigger theme version bump. Refer to gulpfile.js for gulp-bump parameter usage.
