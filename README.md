@@ -34,9 +34,9 @@ shopify version
 
 ### Node Setup
 
-If you install Homebrew first it will install Node for you.
+If you install Homebrew first it will install Node for you. Recommended.
 
-I would recommend deleting the node_modules folder by running `rm -rf node_modules`, and then running `npm install` with required node version running (using npm this can be done using `nvm use 19` to set node to v19).
+I would also recommend deleting the node_modules folder by running `rm -rf node_modules`, and then installing node dependencies by running `npm install` with required node version already running first (using npm this can be done using `nvm use 19` to set node to v19 for example). Running npm install whilst running a different node version, will install dependencies for that node version.
 
 ### Gulp Setup
 
