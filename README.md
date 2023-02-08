@@ -38,6 +38,8 @@ If you install Homebrew first it will install Node for you. Recommended.
 
 I would also recommend deleting the node_modules folder by running `rm -rf node_modules`, and then installing node dependencies by running `npm install` with required node version already running first (using npm this can be done using `nvm use 19` to set node to v19 for example). Running npm install whilst running a different node version, will install dependencies for that node version.
 
+Installing Node 19.1.0 was tested on OS Ventura 13.0.1 and therefore is recommended.
+
 ### Gulp Setup
 
 With Node installed and configured, let's install Gulp locally, and download the plugins we need. This is a really straight forward process.
@@ -45,6 +47,8 @@ With Node installed and configured, let's install Gulp locally, and download the
 If the project already has a gulpfile.js file in the dev folder (usually `dev` or `src` folder within root of project directory), then just run the `npm install` terminal command to download all the gulp plugins needed.
 
 If installing into new project, then use `npm init` command in dev directory to setup new package.json file. Then run `npm install gulp` command to install Gulp.
+
+Installing Gulp was tested on OS Ventura 13.0.1 and therefore is recommended.
 
 ### Shopify CLI Setup
 
