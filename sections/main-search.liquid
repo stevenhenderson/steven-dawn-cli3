@@ -60,6 +60,21 @@
   }
 {%- endstyle -%}
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script>
+/* List of pages from anywhere */
+$(document).ready(function() {
+  if (typeof jQuery == 'undefined') {
+  } else {
+    $.getJSON('/pages.json', function(data) {
+        for(p in data.pages ){
+            console.log( data.pages[ p ].title );
+        }
+    });
+  }
+});
+</script>
+
 <div class="template-search{% unless search.performed and search.results_count > 0 %} template-search--empty{% endunless %} section-{{ section.id }}-padding">
   <div class="template-search__header page-width center">
     {%- if search.performed -%}
