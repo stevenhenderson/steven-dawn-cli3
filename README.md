@@ -1,4 +1,4 @@
-## Overview (10 January 2023)
+## Overview (22 november 2024)
 
 - Run a [Buddy Live Backup] before carrying out any live changes.
 - To preview the dev theme in your browser, refer to the URL in the Shopify CLI terminal.
@@ -6,11 +6,17 @@
 - Check if there are Buddy pipelines for [review] and [production] deployment.
 
 
-## Requirements
+## Basic Version Requirements
 
 1. Node 19.1.0
 2. Gulp (CLI 2.3.0 Local 4.0.2)
 3. Shopify CLI 3.23.0
+
+## Current Verified Version Requirements
+
+1. Node 21.6.2
+2. Gulp (CLI 3.0.0 Local 5.0.0)
+3. Shopify CLI 3.70.0
 
 
 ## Getting setup 🚀
@@ -34,13 +40,9 @@ shopify version
 
 Required by Gulp and Shopify CLI.
 
-#### Setup
-
 If you install Homebrew first it will install Node for you.
 
-I would recommend deleting the node_modules folder by running `rm -rf node_modules`, and then running `npm install` with required node version running (using npm this can be done using `nvm use 19` to set node to v19).
-
-#### Usage
+I would recommend deleting existing node_modules folder by running `rm -rf node_modules`, and then running `npm install` to install node with the required node version running (using npm this can be done using `nvm use 19` to set node to v19). To install a specific version of node, first [install node version manager](https://www.linode.com/docs/guides/how-to-install-use-node-version-manager-nvm) and then run `npm install` running the required node version (important, as different versions of node install different node modules).
 
 With the node envionment setup, we will just be using Shopify CLI and Gulp when working on Shopify themes.
 
@@ -51,9 +53,7 @@ Feel free to review the gulpfile.js but as a quickover, we are mainly just uglif
 
 The icons folder will accept svgs, it will minify them and strip out any comments or unnessarcy spacing (and also attributes such as class; important to retain if used for css animation, in which case comment out this function in gulpfile.js). It will also prefix the file name with 'icon-' if it doesn't exist, and drop the icon within the snippets folder.
 
-#### Setup
-
-With Node installed and configured, let's install Gulp locally, and download the plugins we need. This is a really straight forward process.
+With Node installed and configured, [install Gulp](https://www.npmjs.com/package/gulp-install) locally and download any required gulp plugins.
 
 If the project already has a gulpfile.js file in the dev folder (usually `dev` or `src` folder within root of project directory), then just run the `npm install` terminal command to download all the gulp plugins needed.
 
